@@ -92,6 +92,7 @@ class Agent(ABC):
 
         self.skill_loader: Optional[SkillLoader] = None
         if self.config.skills_enabled:
+            # 1. 创建 SkillLoader 实例
             skills_path = Path(self.config.skills_dir)
             self.skill_loader = SkillLoader(skills_dir=skills_path)
 
